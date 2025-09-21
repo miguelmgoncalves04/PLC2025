@@ -5,4 +5,4 @@ Para isso usei um autómato como método auxiliar para representar o meu pensame
 
 # Soluções :
 [Autómato auxiliar usado para obter a solução](automato.jpeg)
-[Solução final em texto] (solucao.txt)
+[Solução final em texto](solucao.txt)
