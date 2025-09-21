@@ -4,5 +4,5 @@ Neste trabalho, foi nos proposto pelo professor que representássemos uma lingua
 Para isso usei um autómato como método auxiliar para representar o meu pensamento, obtendo depois a linguagem regular final.
 
 # Soluções :
-[Autómato auxiliar usado para obter a solução](automato.jpeg)<br>
+[Autómato auxiliar usado para obter a solução](automato.jpeg)<br><br>
 [Solução final em texto](solucao.txt)
