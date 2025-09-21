@@ -4,4 +4,4 @@ Neste trabalho, foi nos proposto pelo professor que representássemos uma lingua
 Para isso usei um autómato como método auxiliar para representar o meu pensamento, obtendo depois a linguagem regular final.
 
 # Soluções :
-    [Autómato auxiliar usado para obter a solução](Documentos/PLC/PLC2025/automato.jpeg)
+[Autómato auxiliar usado para obter a solução](Documentos/PLC/PLC2025/automato.jpeg)
