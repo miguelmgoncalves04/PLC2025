@@ -1,0 +1,32 @@
+[
+  {
+    "cod": "A23",
+    "nome": "água 0.5L",
+    "quant": 8,
+    "preco": 0.7
+  },
+  {
+    "cod": "B12",
+    "nome": "sumo laranja",
+    "quant": 5,
+    "preco": 1.2
+  },
+  {
+    "cod": "C01",
+    "nome": "batatas fritas",
+    "quant": 0,
+    "preco": 1.0
+  },
+  {
+    "cod": "C69",
+    "nome": "croissant",
+    "quant": 5,
+    "preco": 1.2
+  },
+  {
+    "cod": "C33",
+    "nome": "coca-cola",
+    "quant": 9,
+    "preco": 1.0
+  }
+]
