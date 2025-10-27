@@ -9,7 +9,7 @@ O programa deve:
     Informar erros sintáticos com mensagens claras.
     Opcionalmente, construir uma árvore de derivação da expressão.
 
-
+FIcheiros utilizados :
 
 [Código em Python](analisador.py)<br>
 [Input utilizado](input.py)<br>
