@@ -26,7 +26,14 @@ def listar(stock):
 
 def inserir_moedas(saldo, comando):
     # Exemplo: "MOEDA 1e, 20c, 5c" ou "MOEDA 1E, 20C, 5C"
-    texto = comando.upper().replace("MOEDA", "")
+    # Não transformar toda a string em maiúsculas (preservar separador decimal)
+    # Remover apenas o prefixo 'MOEDA' (case-insensitive) e preservar o resto
+    cmd = comando
+    if cmd.strip().upper().startswith("MOEDA"):
+        parts = cmd.strip().split(None, 1)
+        texto = parts[1] if len(parts) > 1 else ""
+    else:
+        texto = cmd
     moedas = [m.strip() for m in texto.split(",") if m.strip()]
     for m in moedas:
         # aceitar formatos como '1E', '20C', '0.5E' ou '50C'
@@ -114,12 +121,15 @@ def main():
     print("maq: Bom dia. Estou disponível para atender o seu pedido.")
 
     while True:
-        cmd = input(">> ").strip().upper()
+        # manter a entrada original em `cmd_raw` e usar `cmd` apenas para
+        # detecção do comando sem perder a formatação dos números
+        cmd_raw = input(">> ").strip()
+        cmd = cmd_raw.upper()
 
         if cmd.startswith("LISTAR"):
             listar(stock)
         elif cmd.startswith("MOEDA"):
-            saldo = inserir_moedas(saldo, cmd)
+            saldo = inserir_moedas(saldo, cmd_raw)
             euros = int(saldo)
             cent = int(round((saldo - euros) * 100))
             print(f"maq: Saldo = {euros}e{cent:02d}c")
