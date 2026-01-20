@@ -1,7 +1,7 @@
 import makecode
 from lexer import lexer, tokens
 import ply.yacc as yacc
-#import webauto
+import webauto
 from parser import parser
 from semantics import SemanticAnalyzer
 import testes
@@ -14,7 +14,7 @@ if parser.success:
 
     # Verifica se a semântica aprova
     if analyzer.analyze(result):
-        print("\n[INFO] Análise Semântica: SUCESSO.")
+        print("\nAnálise Semântica: Passou.")
         print("="*40)
        # analyzer.print_symbol_table();
 
@@ -23,10 +23,10 @@ if parser.success:
         # Gravar em ficheiro
         with open("programa_final.txt", "w") as f:
             f.write(codigo_final)
-            #webauto.abrir_e_colar(codigo_final)
+            webauto.abrir_e_colar(codigo_final)
 
     else:
-        print("\n[ERRO] Falha na Semântica. Código não gerado.")
+        print("\nFalha na Semântica. Código não gerado.")
         analyzer.print_errors()
         analyzer.print_symbol_table()
 else:
